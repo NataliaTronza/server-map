@@ -1,0 +1,334 @@
+.container {
+  /* max-width: 1020px; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 80px;
+}
+
+.next-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 18.72px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.map-block {
+  display: flex;
+  justify-content: center;
+}
+
+.map-wrapper {
+  position: relative;
+  max-width: 1280px;
+}
+
+.map {
+  width: 100%;
+}
+
+.btn-wrapper {
+  position: absolute;
+}
+
+.btn-wrapper--n-am {
+  top: 35%;
+  left: 250px;
+}
+
+.btn-wrapper--s-am {
+  top: 66%;
+  left: 370px;
+}
+
+.btn-wrapper--eu {
+  top: 33%;
+  left: 625px;
+}
+
+.btn-wrapper--as {
+  top: 47%;
+  right: 290px;
+}
+
+.btn-wrapper--au {
+  bottom: 17%;
+  right: 180px;
+}
+
+.btn {
+  background-image: url(./img/man_empty.png);
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-active {
+  background-image: url(./img/man_filled.png);
+}
+
+.btn--small {
+  width: 16.58px;
+  height: 39.33px;
+}
+
+.btn--mid {
+  width: 21.55px;
+  height: 51.87px;
+}
+
+.btn--big {
+  width: 28.02px;
+  height: 67.43px;
+}
+
+.next-btn {
+  color: blue;
+  display: none;
+  cursor: pointer;
+}
+
+.next-btn-active {
+  display: inline;
+}
+
+.device {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: none;
+  z-index: 2;
+}
+
+.device-wrapper--n-am .device--small {
+  top: 40%;
+  /* left: 310px; */
+  left: 25%;
+}
+
+.device-wrapper--n-am .device--medium {
+  top: 43%;
+  /* left: 260px; */
+  left: 20.5%;
+}
+
+.device-wrapper--n-am .device--large {
+  top: 40.5%;
+  /* left: 210px; */
+  left: 16%;
+}
+
+.device-wrapper--s-am .device--small {
+  bottom: 25%;
+  /* left: 420px; */
+  left: 33%;
+}
+
+.device-wrapper--s-am .device--medium {
+  bottom: 17%;
+  /* left: 395px; */
+  left: 31%;
+}
+
+.device-wrapper--s-am .device--large {
+  bottom: 29%;
+  /* left: 360px; */
+  left: 28%;
+}
+
+.device-wrapper--eu .device--small {
+  top: 38%;
+  left: 52%
+}
+
+.device-wrapper--eu .device--medium {
+  top: 43%;
+  left: 45%;
+}
+
+.device-wrapper--eu .device--large {
+  top: 33%;
+  left: 58%;
+}
+
+.device-wrapper--as .device--small {
+  bottom: 44.5%;
+  right: 21%
+}
+
+.device-wrapper--as .device--medium {
+  bottom: 42%;
+  right: 30%
+}
+
+.device-wrapper--as .device--large {
+  bottom: 55%;
+  right: 17%
+}
+
+.device-wrapper--au .device--small {
+  bottom: 16.5%;
+  right: 11%
+}
+
+.device-wrapper--au .device--medium {
+  bottom: 17%;
+  right: 19%;
+}
+
+.device-wrapper--au .device--large {
+  bottom: 18%;
+  right: 15%;
+}
+
+.server {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+.server-first--n-am {
+  top: 43%;
+  left: 13%;
+}
+
+.server-second--n-am {
+  top: 43%;
+  left: 29%;
+}
+
+.server--eu {
+  top: 40%;
+  left: 48%;
+}
+
+.server--as {
+  right: 22%;
+  bottom: 29%;
+}
+
+.hidden {
+  display: none;
+}
+
+.showed {
+  display: block;
+}
+
+.next-btn:disabled {
+  color: rgb(76, 138, 133)
+}
+
+.line {
+  position: absolute;
+  /* z-index: -1; */
+  display: none;
+  z-index: 1;
+}
+
+.la-wrapper .line {
+  top: 1%;
+  left: 0;
+  /* display: none; */
+}
+
+.ny-wrapper .line {
+  top: 1.5%;
+  left: -0.2%;
+  /* display: none; */
+}
+
+.frank-wrapper .line {
+  top: 1%;
+  left: -0.2%;
+  /* display: none; */
+}
+
+.sing-wrapper .line {
+  top: -1%;
+  left: -0.2%;
+  /* display: none; */
+}
+
+/* .la-s-am .line--small {
+  top: 1%;
+  left: 0;
+}
+
+.la-s-am .line--medium {
+  top: 1%;
+  left: 0;
+}
+
+.la-s-am .line--large {
+  top: 1%;
+  left: 0;
+}
+
+.la-n-am .line--small {
+  top: 1%;
+  left: 0;
+}
+
+.la-n-am .line--medium {
+  top: 1%;
+  left: 0;
+}
+
+.la-n-am .line--large {
+  top: 1%;
+  left: 0;
+}
+
+.la-eu .line--small {
+  top: 1%;
+  left: 0;
+}
+
+.la-eu .line--medium {
+  top: 1%;
+  left: 0;
+}
+
+.la-eu .line--large {
+  top: 1%;
+  left: 0;
+}
+
+.la-as .line--small {
+  top: 1%;
+  left: 0;
+}
+
+.la-as .line--medium {
+  top: 1%;
+  left: 0;
+}
+
+.la-as .line--large {
+  top: 1%;
+  left: 0;
+}
+
+.la-au .line--small {
+  top: 1%;
+  left: 0;
+}
+
+.la-au .line--medium {
+  top: 1%;
+  left: 0;
+}
+
+.la-au .line--large {
+  top: 1%;
+  left: 0;
+} */
+
+
