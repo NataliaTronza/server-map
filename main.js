@@ -4,8 +4,6 @@ const nextBtn = document.querySelector('.next-btn');
 const servers = document.querySelectorAll('.server');
 const title = document.querySelector('.main-title');
 const linesBlocks = document.querySelectorAll('.server-holder');
-// console.log(servers)
-
 
 
 //В цей масив отримаємо масиви з кнопками
@@ -34,34 +32,13 @@ const linesArray = [];
 
 for (let i = 0; i < linesBlocks.length; i++) {
   linesArray.push([]);
-  // console.log(linesBlocks[i])
   const countries = linesBlocks[i].querySelectorAll('.line-wrapper');
   for (let country of countries) {
     const lines = country.querySelectorAll('.line');
     linesArray[i].push(lines)
   }
 }
-// console.log('linesArray:', linesArray)
 
-// for (let elems of btnsArray) {
-//   checkedBtnsArray.push([])
-//   for (let i = 0; i < elems.length; i++) {
-//     elems[i].addEventListener('click', function() {
-//       // console.log(i)
-//       if (i > 0) {
-//         for (let j = 0; j < i; j++) {
-//           elems[j].classList.add('btn-active')
-//         }
-//       }
-//       this.classList.toggle('btn-active');
-//       if(!this.classList.contains('btn-active')) {
-//         for (let k = elems.length - 1; k >= i; k--) {
-//           elems[k].classList.remove('btn-active')
-//         }
-//       }
-//     })
-//   }
-// }
 
 for (let i = 0; i < btnsArray.length; i++) {
   let isChecked = false;
@@ -70,7 +47,6 @@ for (let i = 0; i < btnsArray.length; i++) {
     btnsArray[i][j].addEventListener('click', function () {
       regionBtnsGroup[i].classList.add('hidden')
       for (let k = 0; k <= j; k++) {
-        // btnsArray[i][k].classList.add('btn-active');
         checkedBtnsArray[i].push(btnsArray[i][k]);
         devicesArray[i][k].classList.add('showed')
       }
@@ -138,8 +114,6 @@ function goNext() {
   nextBtn.classList.remove('next-btn-active');
   nextBtn.removeEventListener('click', goNext)
   nextBtn.addEventListener('click', calculation);
-  // console.log('checkedBtnsArray', checkedBtnsArray);
-  // console.log('devicesArray', devicesArray);
 }
 
 nextBtn.addEventListener('click', goNext);
@@ -151,93 +125,6 @@ function serverMouseOver() {
 function serverMouseOut() {
   this.src = './img/circle_empty.png'
 }
-
-
-
-// function calculation() {
-//   if (isCheckedArray[0] !== 'unchecked') {
-//     if (checkedBtnsArray[0].length > 0) {
-//       console.log('from LA to South America');
-//       for (let i = 0; i < checkedBtnsArray[0].length; i++) {
-//         linesArray[0][0][i].style.display = 'block'
-//       }
-//     }
-//     if (isCheckedArray[1] === 'unchecked' && checkedBtnsArray[1].length > 0) {
-//       console.log('from LA to North America')
-//     }
-//   }
-//   if (isCheckedArray[1] !== 'unchecked') {
-//     if (checkedBtnsArray[1].length > 0) {
-//       console.log('from NY to North America')
-//     }
-//     if (isCheckedArray[0] === 'unchecked' && checkedBtnsArray[0].length > 0) {
-//       console.log('from NY to South America')
-//     }
-//     if (isCheckedArray[2] === 'unchecked' && checkedBtnsArray[2].length > 0) {
-//       console.log('from NY to Europe')
-//     }
-//   }
-//   if (isCheckedArray[2] !== 'unchecked') {
-//     if (checkedBtnsArray[2].length > 0) {
-//       console.log('from Frankfurt to Europe');
-//     }
-//     if (isCheckedArray[3] === 'unchecked' && checkedBtnsArray[3].length > 0) {
-//       console.log('from Frankfurt to Asia');
-//     }
-//     if (isCheckedArray[3] === 'unchecked' && checkedBtnsArray[4].length > 0) {
-//       console.log('from Frankfurt to Australia');
-//     }
-//   }
-//   if (isCheckedArray[3] !== 'unchecked') {
-//     if (checkedBtnsArray[3].length > 0) {
-//       console.log('from Singapore to Asia')
-//     }
-//     if (checkedBtnsArray[3].length > 0) {
-//       console.log('from Singapore to Australia')
-//     }
-//   }
-//   console.log('calculation!!!');
-//   console.log(isCheckedArray)
-//   for (let i = 0; i < isCheckedArray.length; i++) {
-//     if (isCheckedArray[i] === 'unchecked') {
-//       servers[i].style.display = 'none';
-//     }
-//   }
-// }
-
-// console.log(linesArray);
-
-
-
-// function calculation() {
-//   Якщо цей континент необраний, сюди потрапить пуста строка, якщо обраний - індекс найближчого серверу
-//   const serverIndexes = [];
-//   for (let i = 0; i < checkedBtnsArray.length; i++ ) {
-//     if (checkedBtnsArray[i].length > 0) {
-//       Сюди запушиться відстань між нашим девайсом(ми беремо перший - ноут та кожним із серверів. На випадок, якщо сервер необраний, запушиться пуста строчка)
-//       const distances = [];
-//       for (let j = 0; j < isCheckedArray.length; j++) {
-//         if (isCheckedArray[j] !== 'unchecked') {
-//           const rectA = devicesArray[i][0].getBoundingClientRect(); //first device
-//           const rectB = servers[j].getBoundingClientRect(); //server
-//           const distance = Math.sqrt(
-//             Math.pow(rectB.left - rectA.left, 2) +
-//             Math.pow(rectB.top - rectA.top, 2)
-//           );
-//           distances.push(distance);
-//         } else {
-//           distances.push('');
-//         }
-//       }
-//       const serverIndex = getMinIndex(distances);
-//       serverIndexes.push(serverIndex);
-//     } else {
-//       serverIndexes.push('');
-//     }
-//   }
-//   console.log(serverIndexes);
-//   console.log('calculation!!!');
-// }
 
 function getMinIndex(arr) {
   let min;
@@ -265,32 +152,6 @@ function findDistance(elem1, elem2) {
   );
   return distance;
 }
-
-// function calculation() {
-//   const connectedServers = {
-
-//   }
-//   for (let i = 0; i < isCheckedArray.length; i++) {
-//     if (isCheckedArray[i] !== 'unchecked') {
-//       const distances = [];
-//       connectedServers[i] = {};
-//       connectedServers[i].connectedClients = [];
-//       for (let j = 0; j < checkedBtnsArray.length; j++) {
-//         if (checkedBtnsArray[j].length > 0) {
-//           const distance = findMinDistance(servers[i], devicesArray[j][0]);
-//           distances.push(distance);
-//         } else {
-//           distances.push('');
-//         }
-//       }
-//       console.log(distances);
-//       const clientIndex = getMinIndex(distances);
-//       connectedServers[i].connectedClients.push(clientIndex)
-//     }
-//   }
-//   console.log('calculation');
-//   console.log(connectedServers)
-// }
 
 
 function calculation() {
